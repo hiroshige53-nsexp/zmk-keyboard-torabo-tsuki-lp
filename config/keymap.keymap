@@ -45,9 +45,9 @@
             layers = <2>;
         };
 
-        mo_6 {
+        mo_BTlayer {
             bindings = <&mo 6>;
-            key-positions = <63 64>;
+            key-positions = <42 43>;
         };
     };
 
