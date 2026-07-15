@@ -4,9 +4,11 @@
 
 &zip_temp_layer {
     excluded-positions = <
+        15 // H copy
         16 // J left
         17 // K middle
         18 // L right
+        27 // N paste
         28 // M prev
         30 // . next
     >;
