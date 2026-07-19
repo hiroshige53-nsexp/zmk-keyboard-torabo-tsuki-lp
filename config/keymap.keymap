@@ -72,6 +72,35 @@
         };
     };
 
+    behaviors {
+        hmr_r_2: hmr_r_2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_R_2";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            hold-trigger-on-release;
+            require-prior-idle-ms = <150>;
+            hold-while-undecided;
+            hold-trigger-key-positions = <25 26 27 28 29 30 41 42 43 44 55 56 57 58 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 38 39 40 41 42 43 52 53 54 55 56 57>;
+        };
+
+        hmr_r: hmr_r {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HMR_R";
+            bindings = <&none>, <&none>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 38 39 40 41 42 43 44 52 53 54 55 56 57 58>;
+            hold-trigger-on-release;
+            require-prior-idle-ms = <150>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
