@@ -143,11 +143,11 @@
 
         layer_0 {
             bindings = <
-&none  &none              &none              &none                  &none                    &none                                             &none        &none                     &none                   &none               &none                  &none
-&none  &kp Q              &kp W              &kp E                  &kp R                    &kp T                                             &kp Y        &kp U                     &kp I                   &kp O               &lt 8 P                &none
-&none  &hrm_l LEFT_WIN A  &hrm_l LEFT_ALT S  &hrm_l_2 LEFT_SHIFT D  &hrm_l_2 LEFT_CONTROL F  &kp G        &none             &none              &kp H        &hrm_r_2 RIGHT_CONTROL J  &hrm_r_2 RIGHT_SHIFT K  &hrm_r RIGHT_ALT L  &hrm_r LEFT_WIN MINUS  &none
-&none  &kp Z              &kp X              &kp C                  &kp V                    &kp B        &kp LS(CAPSLOCK)  &kp JP_UNDERSCORE  &kp N        &kp M                     &kp COMMA               &kp DOT             &lt 9 FSLH             &none
-&none  &kp LCTRL          &kp LGUI           &kp LALT               &lt 4 INT_MUHENKAN       &lt 2 SPACE  &lt 3 INT_HENKAN  &kp BACKSPACE      &lt 5 ENTER  &none                     &none                   &kp RCTRL           &kp RSHIFT             &none
+&none  &none              &none              &none                  &none                  &none                                             &none        &none                   &none                   &none               &none                  &none
+&none  &kp Q              &kp W              &kp E                  &kp R                  &kp T                                             &kp Y        &kp U                   &kp I                   &kp O               &lt 8 P                &none
+&none  &hrm_l LEFT_WIN A  &hrm_l LEFT_ALT S  &hrm_l_2 LEFT_SHIFT D  &hrm_l LEFT_CONTROL F  &kp G        &none             &none              &kp H        &hrm_r RIGHT_CONTROL J  &hrm_r_2 RIGHT_SHIFT K  &hrm_r RIGHT_ALT L  &hrm_r LEFT_WIN MINUS  &none
+&none  &kp Z              &kp X              &kp C                  &kp V                  &kp B        &caps_word        &kp JP_UNDERSCORE  &kp N        &kp M                   &kp COMMA               &kp DOT             &lt 9 FSLH             &none
+&none  &kp LCTRL          &kp LGUI           &kp LALT               &lt 4 INT_MUHENKAN     &lt 2 SPACE  &lt 3 INT_HENKAN  &kp BACKSPACE      &lt 5 ENTER  &none                   &none                   &kp RCTRL           &kp RSHIFT             &none
             >;
         };
 
@@ -163,11 +163,11 @@
 
         NUMpad_layer {
             bindings = <
-&trans  &trans           &trans           &trans           &trans           &trans                                      &trans  &trans    &trans     &trans   &trans  &trans
-&trans  &kp BACKSPACE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK                             &trans  &trans    &kp PG_UP  &trans   &trans  &trans
-&trans  &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS     &trans   &trans            &trans  &kp HOME  &kp PG_DN  &kp END  &trans  &trans
-&trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp TAB  &kp RS(CAPSLOCK)  &kp N6  &kp N7    &kp N8     &kp N9   &kp N0  &trans
-&trans  &kp KP_DOT       &kp KP_DOT       &kp LS(MINUS)    &trans           &trans           &trans   &kp DELETE        &trans  &trans    &trans     &trans   &trans  &trans
+&trans  &trans           &trans           &trans           &trans           &trans                                   &trans  &trans    &trans     &trans   &trans  &trans
+&trans  &kp BACKSPACE    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_ASTERISK                          &trans  &trans    &kp PG_UP  &trans   &trans  &trans
+&trans  &kp KP_SLASH     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS     &trans   &trans         &trans  &kp HOME  &kp PG_DN  &kp END  &trans  &trans
+&trans  &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_PLUS      &kp TAB  &kp LG(LS(S))  &kp N6  &kp N7    &kp N8     &kp N9   &kp N0  &trans
+&trans  &kp KP_DOT       &kp KP_DOT       &kp LS(MINUS)    &trans           &trans           &trans   &kp DELETE     &trans  &trans    &trans     &trans   &trans  &trans
             >;
         };
 
@@ -175,7 +175,7 @@
             bindings = <
 &trans  &trans            &trans      &trans      &trans      &trans                      &trans       &trans             &trans         &trans            &trans         &trans
 &trans  &kp LS(NUMBER_1)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N5)                  &kaku_kakko  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp AMPERSAND     &kp AT         &trans
-&trans  &kp LEFT_BRACKET  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp N5      &trans  &trans  &maru_kakko  &kp LS(N8)         &kp LS(N9)     &kp SINGLE_QUOTE  &kp SEMICOLON  &trans
+&trans  &kp LEFT_BRACKET  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp EQUAL   &trans  &trans  &maru_kakko  &kp LS(N8)         &kp LS(N9)     &kp SINGLE_QUOTE  &kp SEMICOLON  &trans
 &trans  &kp N6            &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp N0      &trans  &trans  &kaku_kakko  &kp RIGHT_BRACE    &kp PIPE       &kp LS(N1)        &kp LS(SLASH)  &trans
 &trans  &trans            &trans      &trans      &trans      &trans      &trans  &trans  &kp TAB      &trans             &trans         &trans            &trans         &trans
             >;
