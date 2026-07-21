@@ -62,7 +62,7 @@
         };
 
         kp_backslash {
-            bindings = <&kp BACKSLASH>;
+            bindings = <&kp JP_YEN>;
             key-positions = <30 31>;
         };
     };
