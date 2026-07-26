@@ -2,18 +2,6 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
-pointer_accel: pointer_accel {
-    compatible = "zmk,input-processor-pointer-accel";
-    input-type = <INPUT_EV_REL>;
-    track-remainders;
-
-    min-factor = <100>;
-    max-factor = <8000>;
-    speed-threshold = <1200>;
-    speed-max = <1600>;
-    acceleration-exponent = <2>;
-};
-
 &zip_temp_layer {
     excluded-positions = <
         15 // H copy
@@ -61,8 +49,4 @@ pointer_accel: pointer_accel {
 
 &size_l_transform {
     col-offset = <7>;
-};
-
-&pointing_device {
-    processors = <&pointer_accel>;
 };
