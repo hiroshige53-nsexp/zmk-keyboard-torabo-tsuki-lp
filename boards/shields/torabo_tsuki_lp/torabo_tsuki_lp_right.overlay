@@ -35,17 +35,15 @@
         acceleration-exponent = <1>;
         track-remainders;
     };
+};
 
 /* ===================================================
-   2. 慣性スクロール（コースティング）の設定
+   2. 慣性スクロール（モジュール定義済みノードの上書き）
    =================================================== */
-    zip_inertia: zip_inertia {
-        compatible = "zmk,input-processor-inertia";
-        #input-processor-cells = <0>;
-        trigger-ms = <35>;               // 慣性発動までの判定時間 (ms)
-        scroll-decay-factor-int = <85>;  // 減衰率 (大きいほど長く滑る)
-        scroll-report-interval-ms = <20>; // スクロールの更新間隔
-    };
+&zip_inertia {
+    trigger-ms = <35>;               // 慣性発動までの判定時間 (ms)
+    scroll-decay-factor-int = <85>;  // 減衰率 (大きいほど長く滑る)
+    scroll-report-interval-ms = <20>; // スクロールの更新間隔
 };
 
 &zip_temp_layer {
