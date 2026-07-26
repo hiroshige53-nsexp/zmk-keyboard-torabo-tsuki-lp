@@ -11,6 +11,7 @@ manifest:
       url-base: https://github.com/amgskobo
     - name: hiroshige53-nsexp
       url-base: https://github.com/hiroshige53-nsexp
+      
   projects:
     - name: zmk
       remote: zmkfirmware
