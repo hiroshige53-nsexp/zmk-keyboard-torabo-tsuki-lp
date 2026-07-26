@@ -3,11 +3,11 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 /* --- 追加: 加速度と慣性モジュールのヘッダーインクルード --- */
-#include <input/processors/acceleration.dtsi>
-#include <input/processors/inertia.dtsi>
+#include <dt-bindings/zmk/pointing.h>
+#include <zmk-input-inertia/input/processor/input_inertia.dtsi>
 
 /* ===================================================
-   1. 加速度パラメータの設定 (ゆっくり=精密, はやい=大きく移動)
+   1. 加速度パラメータの設定
    =================================================== */
 / {
     // マウスポインタ用 加速度ノード
@@ -15,11 +15,11 @@
         compatible = "zmk,input-processor-acceleration";
         #input-processor-cells = <0>;
         input-type = <INPUT_EV_REL>;
-        min-factor = <800>;              // 低速時: 0.8倍 (精密操作用)
-        max-factor = <3000>;             // 高速時: 3.0倍 (大きく飛ばす)
+        min-factor = <800>;              // 低速時: 0.8倍 (精密操作)
+        max-factor = <3000>;             // 高速時: 3.0倍 (素早い移動)
         speed-threshold = <1000>;        // 加速が始まり出す速度
         speed-max = <5000>;              // 最大加速に達する速度
-        acceleration-exponent = <2>;     // カーブの勢い (1=直線性, 2=二次曲線)
+        acceleration-exponent = <2>;     // カーブの強さ
         track-remainders;
     };
 
@@ -29,7 +29,7 @@
         #input-processor-cells = <0>;
         input-type = <INPUT_EV_REL>;
         min-factor = <1000>;             // 低速時: 1.0倍
-        max-factor = <2500>;             // 高速時: 2.5倍 (素早く弾くと一気にスクロール)
+        max-factor = <2500>;             // 高速時: 2.5倍
         speed-threshold = <800>;
         speed-max = <4000>;
         acceleration-exponent = <1>;
@@ -42,11 +42,12 @@
     zip_inertia: zip_inertia {
         compatible = "zmk,input-processor-inertia";
         #input-processor-cells = <0>;
-        trigger-ms = <30>;               // 判定タイミング (ミリ秒)
-        decay = <230>;                   // 減衰率 (数字が大きいほど長く滑る)
-        min-velocity = <10>;            // 停止する閾値速度
+        trigger-ms = <35>;               // 慣性発動までの判定時間 (ms)
+        scroll-decay-factor-int = <85>;  // 減衰率 (大きいほど長く滑る)
+        scroll-report-interval-ms = <20>; // スクロールの更新間隔
     };
 };
+
 &zip_temp_layer {
     excluded-positions = <
         15 // H copy
