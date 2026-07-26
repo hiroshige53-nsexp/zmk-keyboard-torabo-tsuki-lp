@@ -39,7 +39,7 @@ manifest:
       # --- 追加: 加速度モジュール ---
     - name: zmk-pointing-acceleration
       remote: oleksandrmaslov
-      revision: zmk-v0.3
+      revision: e8f44d852bd85ed0f0e0f86fb6016bf7bc9b699e
 
     # --- 追加: 慣性スクロールモジュール ---
     - name: zmk-input-inertia
