@@ -61,7 +61,7 @@
 &pointing_listener {
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-        &pointer_accel                  // ← マウス移動に加速度を適用
+//        &pointer_accel                  // ← マウス移動に加速度を適用
         &zip_temp_layer 1 800
     >;
     //レイヤー1をオートマウスレイヤに設定　800msec有効
@@ -78,7 +78,7 @@
         layers = <8>;
         input-processors = <
             &zip_xy_to_scroll_mapper
-            &scroll_accel               // ← スクロールに加速度を適用
+//            &scroll_accel               // ← スクロールに加速度を適用
             &zip_scroll_scaler 1 5
             &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
             &zip_inertia                // ← 最尾に慣性処理を配置
