@@ -2,6 +2,18 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+/* ===================================================
+   カーソル加速度（動的スケーラー）の定義
+   =================================================== */
+/ {
+    zip_xy_accel: zip_xy_accel {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        code = <INPUT_REL_XY>;
+    };
+};
+
 &zip_temp_layer {
     excluded-positions = <
         15 // H copy
@@ -17,9 +29,10 @@
 &pointing_listener {
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+        &zip_xy_accel 2 1
         &zip_temp_layer 1 800
     >;
-    //レイヤー1をオートマウスレイヤに設定　800msec有効
+    //レイヤー1をオートマウスレイヤに設定 800msec有効
 
     slow_pointer {
         layers = <9>;
