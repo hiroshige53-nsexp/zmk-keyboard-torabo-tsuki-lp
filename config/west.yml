@@ -9,6 +9,8 @@ manifest:
       url-base: https://github.com/oleksandrmaslov
     - name: amgskobo
       url-base: https://github.com/amgskobo
+    - name: hiroshige53-nsexp
+      url-base: https://github.com/hiroshige53-nsexp
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -40,7 +42,7 @@ manifest:
 
     # --- 追加: 慣性スクロールモジュール ---
     - name: zmk-input-inertia
-      remote: amgskobo
+      remote: hiroshige53-nsexp
       revision: main
   self:
     path: config
