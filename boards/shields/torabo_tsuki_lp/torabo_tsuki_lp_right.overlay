@@ -2,6 +2,51 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+/* --- 追加: 加速度と慣性モジュールのヘッダーインクルード --- */
+#include <input/processors/acceleration.dtsi>
+#include <input/processors/inertia.dtsi>
+
+/* ===================================================
+   1. 加速度パラメータの設定 (ゆっくり=精密, はやい=大きく移動)
+   =================================================== */
+/ {
+    // マウスポインタ用 加速度ノード
+    pointer_accel: pointer_accel {
+        compatible = "zmk,input-processor-acceleration";
+        #input-processor-cells = <0>;
+        input-type = <INPUT_EV_REL>;
+        min-factor = <800>;              // 低速時: 0.8倍 (精密操作用)
+        max-factor = <3000>;             // 高速時: 3.0倍 (大きく飛ばす)
+        speed-threshold = <1000>;        // 加速が始まり出す速度
+        speed-max = <5000>;              // 最大加速に達する速度
+        acceleration-exponent = <2>;     // カーブの勢い (1=直線性, 2=二次曲線)
+        track-remainders;
+    };
+
+    // スクロール用 加速度ノード
+    scroll_accel: scroll_accel {
+        compatible = "zmk,input-processor-acceleration";
+        #input-processor-cells = <0>;
+        input-type = <INPUT_EV_REL>;
+        min-factor = <1000>;             // 低速時: 1.0倍
+        max-factor = <2500>;             // 高速時: 2.5倍 (素早く弾くと一気にスクロール)
+        speed-threshold = <800>;
+        speed-max = <4000>;
+        acceleration-exponent = <1>;
+        track-remainders;
+    };
+
+/* ===================================================
+   2. 慣性スクロール（コースティング）の設定
+   =================================================== */
+    zip_inertia: zip_inertia {
+        compatible = "zmk,input-processor-inertia";
+        #input-processor-cells = <0>;
+        trigger-ms = <30>;               // 判定タイミング (ミリ秒)
+        decay = <230>;                   // 減衰率 (数字が大きいほど長く滑る)
+        min-velocity = <10>;            // 停止する閾値速度
+    };
+};
 &zip_temp_layer {
     excluded-positions = <
         15 // H copy
@@ -17,6 +62,7 @@
 &pointing_listener {
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+        &pointer_accel                  // ← マウス移動に加速度を適用
         &zip_temp_layer 1 800
     >;
     //レイヤー1をオートマウスレイヤに設定　800msec有効
@@ -33,8 +79,10 @@
         layers = <8>;
         input-processors = <
             &zip_xy_to_scroll_mapper
+            &scroll_accel               // ← スクロールに加速度を適用
             &zip_scroll_scaler 1 5
             &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
+            &zip_inertia                // ← 最尾に慣性処理を配置
         >;
     };
 };
