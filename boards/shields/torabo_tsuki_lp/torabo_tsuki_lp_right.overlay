@@ -13,6 +13,10 @@ pointer_accel: pointer_accel {
     acceleration-exponent = <2>;
 };
 
+&pointing_device {
+    processors = <&pointer_accel>;
+};
+
 &zip_temp_layer {
     excluded-positions = <
         15 // H copy
