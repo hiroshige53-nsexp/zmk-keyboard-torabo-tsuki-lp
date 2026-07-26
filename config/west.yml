@@ -5,8 +5,8 @@ manifest:
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
       # --- 追加: 外部ライブラリのリモート ---
-    - name: oleksandrmaslov
-      url-base: https://github.com/oleksandrmaslov
+#    - name: oleksandrmaslov
+#      url-base: https://github.com/oleksandrmaslov
     - name: amgskobo
       url-base: https://github.com/amgskobo
     - name: hiroshige53-nsexp
@@ -37,9 +37,9 @@ manifest:
       revision: main
       
       # --- 追加: 加速度モジュール ---
-    - name: zmk-pointing-acceleration
-      remote: oleksandrmaslov
-      revision: main
+#    - name: zmk-pointing-acceleration
+#      remote: oleksandrmaslov
+#      revision: main
 
     # --- 追加: 慣性スクロールモジュール ---
     - name: zmk-input-inertia
