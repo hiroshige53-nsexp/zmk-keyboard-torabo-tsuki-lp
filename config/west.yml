@@ -7,8 +7,8 @@ manifest:
       # --- 追加: 外部ライブラリのリモート ---
 #    - name: oleksandrmaslov
 #      url-base: https://github.com/oleksandrmaslov
-    - name: amgskobo
-      url-base: https://github.com/amgskobo
+#    - name: amgskobo
+#      url-base: https://github.com/amgskobo
     - name: hiroshige53-nsexp
       url-base: https://github.com/hiroshige53-nsexp
       
