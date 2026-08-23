@@ -191,11 +191,11 @@
 
         ShortCut_layer {
             bindings = <
-&trans  &trans     &trans         &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp GRAVE  &trans         &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &kp LG(LS(S))  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans         &trans  &trans  &trans  &kp LC(LS(ESCAPE))  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans         &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans         &trans  &trans  &trans                              &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &kp GRAVE  &trans         &trans  &trans  &trans                              &kaku_kakko  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &kp LG(LS(S))  &trans  &trans  &trans  &trans              &trans  &maru_kakko  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans         &trans  &trans  &trans  &kp LC(LS(ESCAPE))  &trans  &yama_kakko  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans         &trans  &trans  &trans  &trans              &trans  &trans       &trans  &trans  &trans  &trans  &trans
             >;
         };
 
