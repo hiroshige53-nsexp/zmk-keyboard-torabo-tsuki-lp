@@ -17,5 +17,8 @@
         init-symbol = "mini_trackpad_iqs7211e_init";
         init-length = <217>;
         scroller-mode;
+
+    /* 横スクロール方向の反転 */
+        h-invert;
     };
 };
