@@ -181,21 +181,21 @@
 
         symbol_layer {
             bindings = <
-&trans  &trans            &trans      &trans      &trans      &trans                       &trans       &trans             &trans         &trans            &trans         &trans
-&trans  &kp LS(NUMBER_1)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N5)                   &kaku_kakko  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp AMPERSAND     &kp AT         &trans
-&trans  &kp LEFT_BRACKET  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp EQUAL    &trans  &trans  &maru_kakko  &kp LS(N8)         &kp LS(N9)     &kp SINGLE_QUOTE  &kp SEMICOLON  &trans
-&trans  &kp N6            &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp JP_PIPE  &trans  &trans  &kaku_kakko  &kp RIGHT_BRACE    &kp PIPE       &kp LS(N1)        &kp LS(SLASH)  &trans
-&trans  &trans            &trans      &trans      &trans      &trans       &trans  &trans  &trans       &trans             &trans         &trans            &trans         &trans
+&trans  &trans            &trans      &trans      &trans      &trans                       &trans       &trans             &trans         &trans         &trans            &trans
+&trans  &kp LS(NUMBER_1)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N5)                   &kaku_kakko  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp AMPERSAND  &kp AT            &trans
+&trans  &kp LEFT_BRACKET  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp EQUAL    &trans  &trans  &maru_kakko  &kp LS(N8)         &kp LS(N9)     &kp SEMICOLON  &kp SINGLE_QUOTE  &trans
+&trans  &kp N6            &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp JP_PIPE  &trans  &trans  &yama_kakko  &kp RIGHT_BRACE    &kp PIPE       &kp LS(N1)     &kp LS(SLASH)     &trans
+&trans  &trans            &trans      &trans      &trans      &trans       &trans  &trans  &trans       &trans             &trans         &trans         &trans            &trans
             >;
         };
 
         ShortCut_layer {
             bindings = <
-&trans  &trans     &trans         &trans  &trans  &trans                              &trans       &trans  &trans  &trans  &trans  &trans
-&trans  &kp GRAVE  &trans         &trans  &trans  &trans                              &kaku_kakko  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &kp LG(LS(S))  &trans  &trans  &trans  &trans              &trans  &maru_kakko  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans         &trans  &trans  &trans  &kp LC(LS(ESCAPE))  &trans  &yama_kakko  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans         &trans  &trans  &trans  &trans              &trans  &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans         &trans  &trans  &trans                              &trans       &trans              &trans                  &trans               &trans  &trans
+&trans  &kp GRAVE  &trans         &trans  &trans  &trans                              &kaku_kakko  &trans              &kp LG(LA(UP_ARROW))    &trans               &trans  &trans
+&trans  &trans     &kp LG(LS(S))  &trans  &trans  &trans  &trans              &trans  &maru_kakko  &kp LG(LEFT_ARROW)  &kp LG(LA(DOWN_ARROW))  &kp LG(RIGHT_ARROW)  &trans  &trans
+&trans  &trans     &trans         &trans  &trans  &trans  &kp LC(LS(ESCAPE))  &trans  &yama_kakko  &kp LG(TAB)         &kp LG(D)               &trans               &trans  &trans
+&trans  &trans     &trans         &trans  &trans  &trans  &trans              &trans  &trans       &trans              &trans                  &trans               &trans  &trans
             >;
         };
 
@@ -241,11 +241,11 @@
 
         slow_mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans    &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB5  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4  &kp LC(C)  &trans     &kp LC(V)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &mkp MB4   &trans     &mkp MB5   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(C)  &trans     &kp LC(V)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
             >;
         };
     };
