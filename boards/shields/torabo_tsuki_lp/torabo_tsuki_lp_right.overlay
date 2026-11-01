@@ -48,19 +48,20 @@
 
 &zip_temp_layer {
     excluded-positions = <
-        15 // H copy
+        6 // U prev
+        8 // O next
         16 // J left
         17 // K middle
         18 // L right
-        27 // N paste
-        28 // M prev
-        30 // . next
+        28 // M copy
+        30 // . paste
     >;
 };
 
 &pointing_listener {
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+        &zip_xy_scaler 3 2
 //        &pointer_accel                  // ← マウス移動に加速度を適用
         &zip_temp_layer 1 800
     >;
