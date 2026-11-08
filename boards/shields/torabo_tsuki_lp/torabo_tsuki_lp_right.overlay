@@ -82,7 +82,7 @@
 //            &scroll_accel               // ← スクロールに加速度を適用
             &zip_scroll_scaler 1 5
             &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
-//            &zip_inertia                // ← 最尾に慣性処理を配置
+            &zip_inertia                // ← 最尾に慣性処理を配置
         >;
     };
 };
