@@ -68,7 +68,7 @@
     //レイヤー1をオートマウスレイヤに設定　800msec有効
 
     slow_pointer {
-        layers = <9>;
+        layers = <4 9>;
         input-processors = <
             &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
             &zip_xy_scaler 1 2
@@ -76,13 +76,13 @@
     };
 
     scroller {
-        layers = <8>;
+        layers = <2 8>;
         input-processors = <
             &zip_xy_to_scroll_mapper
 //            &scroll_accel               // ← スクロールに加速度を適用
             &zip_scroll_scaler 1 5
             &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
-            &zip_inertia                // ← 最尾に慣性処理を配置
+//            &zip_inertia                // ← 最尾に慣性処理を配置
         >;
     };
 };
