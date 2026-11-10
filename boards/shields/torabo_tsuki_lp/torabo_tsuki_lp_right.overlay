@@ -76,7 +76,7 @@
     };
 
     scroller {
-        layers = <2 8>;
+        layers = <3 8>;
         input-processors = <
             &zip_xy_to_scroll_mapper
 //            &scroll_accel               // ← スクロールに加速度を適用
